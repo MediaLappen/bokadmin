@@ -5,7 +5,7 @@ class Error extends Controller
 	function __construct()
 	{
 		parent::__construct();
-		echo 'This is en Error - Page does not exist';
+		echo 'Det har blivit fel - Sidan finns inte <br>';
 
 		$this->view->msg = "this page dosent exist";
 		$this->view->render('error/index');
