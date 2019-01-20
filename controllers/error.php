@@ -4,12 +4,16 @@ class Error extends Controller
 {
 	function __construct()
 	{
-		parent::__construct();
-		echo 'Det har blivit fel - Sidan finns inte <br>';
+		parent::__construct();	
 
-		$this->view->msg = "this page dosent exist";
-		$this->view->render('error/index');
 	}
+
+	function index()
+	{
+		$this->view->msg = "this page dosent exist";
+		$this->view->render('error');	
+	}
+
 
 }
 

@@ -1,10 +1,15 @@
 <?php
 
 class Index extends Controller{
-	function __construct(){
+	function __construct()
+	{
+		parent::__construct();	
+	}
 
-		parent::__construct();
-		echo 'Vi är på index (start) <br>';
+	function index()
+	{
+		echo "inside index";
+		$this->view->render('index');
 	}
 }
 

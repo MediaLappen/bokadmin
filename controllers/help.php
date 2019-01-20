@@ -2,9 +2,14 @@
 
 class Help extends Controller{
 	
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
-		echo 'Vi är i hjälpsidan <br>';
+	}
+
+	function index()
+	{
+		$this->view->render('help');
 
 	}
 
@@ -14,8 +19,6 @@ class Help extends Controller{
 		echo 'we ar inside other <br>';
 		echo 'Optional: ' . $argu. '<br>';
 		
-		require 'models/help_model.php';
-		$model = new Help_Model();
 	}
 }
 
