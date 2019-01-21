@@ -6,8 +6,6 @@ Class Controller
 		//echo "Main Controller <br>";
 		$this->view = new View();
 
-		
-
 	}
 
 	public function loadModel ($name)
