@@ -1,14 +1,10 @@
 <?php
 	class Calender{
 
-		function __construct(){
-		echo "this is calender";
-		//require 'models/calender_model.php';
-		//$this->days = new Calender_Model();
-		//$this->reddays = new Controller();
+		//function __construct(){
+		//echo "this is calender";
 		
-		//$this->reddays->loadCalender();
-		}
+		//}
 
 		public function calenderInit(){
 

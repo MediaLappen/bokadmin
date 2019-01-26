@@ -8,13 +8,10 @@
     <title>Bokadamin</title>
 
     <!-- Bootstrap css-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    //<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- MediaLappen's css -->
-     <link rel="stylesheet" href="<?php echo URL; ?>public/css/medialappen-style.css">
-
-
-   
+     <link rel="stylesheet" href="<?php echo URL; ?>public/css/medialappen-style.css">   
   </head>
   <body>
   
