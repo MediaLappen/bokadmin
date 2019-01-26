@@ -1,6 +1,6 @@
 <?php 
 
-class CalenderView_Model extends Model
+class Holidays_Model extends Model
 {
 	public function __construct()
 	{
@@ -8,11 +8,10 @@ class CalenderView_Model extends Model
 		
 		//var_dump( $this->holidays());
 
-
 	}
 
 
-	public function holidays()
+	public function getHolidays()
 	{
 		$holidays = Array();
 
@@ -50,7 +49,6 @@ class CalenderView_Model extends Model
 		return $this->dayarray;
 
 	}
-
 
 }
 ?>

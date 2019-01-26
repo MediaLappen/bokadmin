@@ -1,22 +1,16 @@
 <?php
+	class Calender{
 
- class CalenderView extends Controller
- {
- 	function __construct()
-	{
-		parent::__construct();	
+		function __construct(){
+		echo "this is calender";
+		//require 'models/calender_model.php';
+		//$this->days = new Calender_Model();
+		//$this->reddays = new Controller();
+		
+		//$this->reddays->loadCalender();
+		}
 
-
-
-	}
-
-
-	
-
-	
-
-	function index()
-	{
+		public function calenderInit(){
 
 
 		$months = array(
@@ -70,15 +64,13 @@
 
 
 
-
-
-		$this->view->render('calenderview');
-		//var_dump($this->model->holidays());	
 	}
 
 	public function holidays()
 	{
-		return $this->model->holidays();
+		require 'models/holidays_model.php';
+		$this->model = new Holidays_Model();
+		return $this->model->getHolidays();
 	}	
 
 
@@ -150,10 +142,6 @@
     	$res .= '</table>';
     	return $res;
     }
-
 	
 }
-    
-
 ?>
-    

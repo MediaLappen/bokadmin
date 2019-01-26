@@ -3,13 +3,18 @@
 class Index extends Controller{
 	function __construct()
 	{
+		
+
 		parent::__construct();	
+		$this->cal->calenderInit();
+		
 	}
 
 	function index()
 	{
-		echo "inside index";
 		$this->view->render('index');
+		//$this->loadCalender();
+		
 	}
 }
 

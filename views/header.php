@@ -17,7 +17,7 @@
    
   </head>
   <body>
-   <?php require 'views/navigation.php'; ?>
+  
 
 
    

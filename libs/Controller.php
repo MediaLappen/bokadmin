@@ -5,7 +5,11 @@ Class Controller
 	function __construct(){
 		//echo "Main Controller <br>";
 		$this->view = new View();
+		$this->cal = new Calender();
+		
+		
 	}
+	
 
 	public function loadModel ($name)
 	{
