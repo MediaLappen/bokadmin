@@ -1,27 +1,31 @@
 <?php
-	class Calender{
+class Calender extends Controller{
+	function __construct(){
+		parent::__construct();
+	
+	}
 
-		//function __construct(){
-		//echo "this is calender";
+	function index()
+	{
+		//$this->view->msg = "Denna sida finns inte";
+		//$this->view->render('error');	
+	}
+
+	function calenderInit(){
 		
-		//}
-
-		public function calenderInit(){
-
-
 		$months = array(
-    	'januari',
-    	'februari',
-    	'mars',
-    	'april',
-    	'maj',
-    	'juni',
-    	'juli',
-    	'augusti',
-    	'september',
-    	'oktober',
-    	'november',
-    	'december',
+    		'januari',
+    		'februari',
+    		'mars',
+    		'april',
+    		'maj',
+    		'juni',
+    		'juli',
+    		'augusti',
+    		'september',
+    		'oktober',
+    		'november',
+    		'december',
 		);
 		
 		//Init, startmånad från i idag
@@ -57,17 +61,7 @@
 		echo date("Y");
 		echo "<br>";
 		echo "<br>The time is " . date("h:i:sa");
-
-
-
 	}
-
-	public function holidays()
-	{
-		require 'models/holidays_model.php';
-		$this->model = new Holidays_Model();
-		return $this->model->getHolidays();
-	}	
 
 
 	public function year2array($year) 
@@ -138,6 +132,18 @@
     	$res .= '</table>';
     	return $res;
     }
-	
+
+
+	public function holidays()
+	{
+		
+		return $this->model->getHolidays();
+		
+	}	
+
+
+
 }
+
+
 ?>

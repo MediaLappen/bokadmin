@@ -11,8 +11,24 @@ class Loggain_Model extends Model
 	public function run(){
 		
 		//Recive the posted variables
-		$email = $_POST['email'];
-		$password = $_POST['password'];
+		if (isset($_POST['email']))
+			{
+				$email = $_POST['email'];
+			}
+			else
+			{
+				header("Location: ../loggain");
+			}
+		
+
+		if (isset($_POST['password']))
+			{
+				$password = $_POST['password'];
+			}
+			else
+			{
+				header("Location: ../loggain");
+			}
 		
 		//make sure of connection
 		if ($this->db->conn()->connect_errno) 
@@ -32,12 +48,12 @@ class Loggain_Model extends Model
 		//if query found == succeed
 		if (mysqli_num_rows($query) > 0) 
 		{	
-			echo "Användaren finns";
+			header("Location: ../setup");
 
 		}
 		else
 		{
-			echo "Användaren finns inte";
+			header("Location: ../loggain");
 		}
 
 	}
