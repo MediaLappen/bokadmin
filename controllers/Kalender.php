@@ -42,11 +42,14 @@ class Kalender extends Controller{
 		$cal = $this->year2array($yearnow);
 		
 		$i=0;
+		
+		echo "<div class='calender'>"; 
+		
 		for ($x = 0; $x <= $numbermonth; $x++) 
 		{
 		
-   			echo $months[($monthnow-1)+$i]." ".$yearnow;
-			echo "<br>";
+   			echo "<p class='monthtitle'>".$months[($monthnow-1)+$i]." ".$yearnow."</p>";
+			
 			echo $this->month2table($monthnow+$i,$cal,$yearnow, $holidays);
 			
 			if(($monthnow+$i)==12)
@@ -56,6 +59,8 @@ class Kalender extends Controller{
 			
 			$i=$i+1;
 		} 
+		
+		echo "</div>";
 	
 		date_default_timezone_set("Europe/Stockholm");
 		echo date("Y");
@@ -97,7 +102,7 @@ class Kalender extends Controller{
 	{
     	$monthvalue = $month;
 		$ca = 'align="center"';
-    	$res = "<table cellpadding=\"2\" cellspacing=\"1\" style=\"border:solid 1px #000000;font-family:tahoma;font-size:12px;background-color:#ababab\"><tr><td $ca>mon</td><td $ca>tis</td><td $ca>ons</td><td $ca>tor</td><td $ca>fre</td><td $ca>lör</td><td $ca>sön</td></tr>";
+    	$res = "<div class=\"monthspace\"> <table cellpadding=\"2\" cellspacing=\"1\" ><tr><td $ca>mon</td><td $ca>tis</td><td $ca>ons</td><td $ca>tor</td><td $ca>fre</td><td $ca>lör</td><td $ca>sön</td></tr>";
     	foreach ($calendar_array[$month] as $month=>$week) 
     	{
       		$res .= '<tr>';
@@ -120,7 +125,7 @@ class Kalender extends Controller{
 			//---------------------------------------------------------------------------
 			
 			
-					$res .= ' id="'.$day.'-'.$monthvalue.'-'.$yearvalue.'">' . ($day ? $day : '&nbsp;') . '</button></td>';
+					$res .= ' title="'.$day.'/'.$monthvalue.' '.$yearvalue.'" id="'.$day.'-'.$monthvalue.'-'.$yearvalue.'">' . ($day ? $day : '&nbsp;') . '</button></td>';
 				}
 				else
 				{
@@ -129,7 +134,7 @@ class Kalender extends Controller{
         	}
       		$res .= '</tr>';
       	}
-    	$res .= '</table>';
+    	$res .= '</table></div>';
     	return $res;
     }
 

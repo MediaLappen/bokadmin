@@ -4,6 +4,63 @@ body{
 	
 }
 
+.calender{
+text-align: center;
+}
+
+
+
+.monthspace{
+	margin: 0 auto;
+    width: 600px;
+    padding: 10px;
+    background: #a7edef;
+    border-radius: 10px;
+}
+
+.monthspace table{
+	width:100%;
+	border:none;
+    background-color: #d3f1f5;
+}
+
+.monthspace td{
+padding: 0;
+    height: 45px;
+    font-weight: 600;
+}
+
+.monthtitle{
+	margin-left: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+	}
+	
 .closeday{
-	background: red;
+	font-weight: 400;
+	background: #e7b6b6;
+	 border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    padding: 10px;
+    height: 45px;
+    width: 100%;
+}
+
+.closeday:hover{
+	background-color:#990000;
+}
+
+.daybutton{
+	font-weight: 400;
+	background-color: #AAFFAA;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    padding: 10px;
+    height: 45px;
+    width: 100%;
+}
+.daybutton:hover{
+	background-color: #57b4a9;
 }
