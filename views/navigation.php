@@ -16,7 +16,18 @@
             <li><a href="<?php echo URL; ?>kontakt">Kontakt</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="<?php echo URL; ?>loggain">Logga In</a></li>
+<?php
+Session::init();
+if(Session::get('Inloggad') == true){
+	echo'<li><a href="'.URL.'setup/logout">Logga ut</a></li>';
+}
+else
+{
+	echo'<li><a href="'.URL.'loggain">Logga In</a></li>';
+}
+?>           
+
+		   
             
           </ul>
         </div><!--/.nav-collapse -->

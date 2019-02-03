@@ -1,6 +1,6 @@
 <?php 
 
-class Calender_Model extends Model
+class Kalender_Model extends Model
 {
 	public function __construct()
 	{

@@ -48,12 +48,15 @@ class Loggain_Model extends Model
 		//if query found == succeed
 		if (mysqli_num_rows($query) > 0) 
 		{	
+			Session::init();
+			Session::set('Inloggad', true);
 			header("Location: ../setup");
 
 		}
 		else
 		{
 			header("Location: ../loggain");
+			Session::destroy();
 		}
 
 	}
